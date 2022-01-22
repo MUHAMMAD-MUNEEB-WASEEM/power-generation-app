@@ -1,0 +1,37 @@
+.loadProfile__input__container{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 30px;
+}
+.loadProfile__result__main{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 0px 0px 30px;
+}
+
+.result__heading{
+    display: flex;
+    text-align: left;
+    margin-left: 30px;
+}
+
+.loadProfile__input{
+    display: flex;  
+    align-items: center;
+}
+
+.loadProfile__input > input{
+    width: 100px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.loadProfile__result{
+    display: flex;
+    align-items: center;
+}
+.loadProfile__result > input{
+    width: 100px;
+    height: 20px;
+    margin-left: 10px;
+}
