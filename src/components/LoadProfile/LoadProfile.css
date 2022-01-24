@@ -5,8 +5,9 @@
 }
 .loadProfile__result__main{
     display: flex;
-    flex-direction: column;
-    margin: 0px 0px 0px 30px;
+    /* margin: 0px 0px 0px 30px; */
+    align-items: center;
+    justify-content: space-around;
 }
 
 .result__heading{
@@ -34,4 +35,8 @@
     width: 100px;
     height: 20px;
     margin-left: 10px;
+}
+
+.loadProfile__technical__heading, .loadProfile__economical__heading{
+    text-align: left;
 }

@@ -128,42 +128,71 @@ function LoadProfile({loadProfileData, capitalFactor, interest_p, fuel_p, consum
 
                     <div className="loadProfile__result__main">
 
-                        <div className="loadProfile__result">
-                            <h3>Load Factor = </h3>
-                            <input type="number" value={loadFactor.toFixed(2) * 100}></input>
+                        <div className="loadProfile__technical">
+
+                            <div className="loadProfile__technical__heading">
+                                <h1>Technical Analysis</h1>
+                            </div>
+
+                            <div className="loadProfile__result">
+                                <h3>Load Factor = </h3>
+                                <input type="number" value={loadFactor.toFixed(2) * 100}></input>
+                            </div>
+
+                            {/* <div className="loadProfile__result">
+                                <h3>Plant Use Factor = </h3>
+                                <input type="number" value={plantUseFactor.toFixed(2) * 100}></input>
+                            </div>
+
+                            <div className="loadProfile__result">
+                                <h3>Plant Capacity Factor = </h3>
+                                <input type="number" value={plantCapacityFactor.toFixed(2) * 100}></input>
+                            </div> */}
+
+                            <div className="loadProfile__result">
+                                <h3>Max Demand (kW) = </h3>
+                                <input type="number" value={format(maxDemand,10)}></input>
+                            </div>
+
+                            <div className="loadProfile__result">
+                                <h3>Energy in 24 hours (kW) = </h3>
+                                <input type="number" value={format(energy, 3)}></input>
+                            </div>
+
+
+                            <div className="loadProfile__result">
+                                <h3>Units generated per annum (kWh) = </h3>
+                                <input type="number" value={format(unitGenerated,4)}></input>
+                            </div>
+                        
                         </div>
 
-                        <div className="loadProfile__result">
-                            <h3>Plant Use Factor = </h3>
-                            <input type="number" value={plantUseFactor.toFixed(2) * 100}></input>
+                        <div className="loadProfile__economical">
+
+                            <div className="loadProfile__economical__heading">
+                                <h1>Economical Analysis</h1>
+                            </div>
+
+                            <div className="loadProfile__result">
+                                <h3>Annual Operating Cost = </h3>
+                                <input type="number" value={format(annualOperatingCost,3)}></input>
+                            </div>
+
+                            <div className="loadProfile__result">
+                                <h3>Fixed Cost = </h3>
+                                <input type="number" value={format(capitalCost,3)}></input>
+                            </div>
+
+                            <div className="loadProfile__result">
+                                <h3>Semi Fixed Cost = </h3>
+                                <input type="number" value={format(semiFixedCost,3)}></input>
+                            </div>
+
+                            <div className="loadProfile__result">
+                                <h3>Running Cost = </h3>
+                                <input type="number" value={format(runningCost,3)}></input>
+                            </div>
                         </div>
-
-                        <div className="loadProfile__result">
-                            <h3>Plant Capacity Factor = </h3>
-                            <input type="number" value={plantCapacityFactor.toFixed(2) * 100}></input>
-                        </div>
-
-                        <div className="loadProfile__result">
-                            <h3>Max Demand (kW) = </h3>
-                            <input type="number" value={format(maxDemand,10)}></input>
-                        </div>
-
-                        <div className="loadProfile__result">
-                            <h3>Energy in 24 hours (kW) = </h3>
-                            <input type="number" value={format(energy, 3)}></input>
-                        </div>
-
-
-                        <div className="loadProfile__result">
-                            <h3>Units generated per annum (kWh) = </h3>
-                            <input type="number" value={format(unitGenerated,4)}></input>
-                        </div>
-
-                        <div className="loadProfile__result">
-                            <h3>Annual Operating Cost = </h3>
-                            <input type="number" value={format(annualOperatingCost,3)}></input>
-                        </div>
-
                     </div>
 
                 </div>
