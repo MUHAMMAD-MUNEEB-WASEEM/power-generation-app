@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './SelectLoadProfiles.css'
 
 function SelectLoadProfiles() {
@@ -10,11 +11,15 @@ function SelectLoadProfiles() {
                     <div className="selectLoadProfiles__one">
                         <div className="selectLoadProfiles__heading__container">
                             <div className='selectLoadProfiles__heading'>
-                                <h1>Load Profile 1</h1>
+                                <Link to='loadprofile1'>
+                                    <h1>Load Profile 1</h1>
+                                 </Link>
                             </div>
 
                             <div className='selectLoadProfiles__heading'>
-                                <h1>Load Profile 2</h1>
+                                 <Link to='loadprofile2'>
+                                    <h1>Load Profile 2</h1>
+                                 </Link>
                             </div>
                         </div>
                     </div>
@@ -23,11 +28,15 @@ function SelectLoadProfiles() {
                     <div className="selectLoadProfiles__two">
                         <div className="selectLoadProfiles__heading__container">
                             <div className='selectLoadProfiles__heading'>
-                                <h1>Load Profile 3</h1>
+                                <Link to='loadprofile3'>
+                                    <h1>Load Profile 3</h1>
+                                 </Link>
                             </div>
 
                             <div className='selectLoadProfiles__heading'>
-                                <h1>Load Profile 4</h1>
+                                <Link to='loadprofile4'>
+                                    <h1>Load Profile 4</h1>
+                                 </Link>
                             </div>
                         </div>
                     </div>
@@ -35,11 +44,15 @@ function SelectLoadProfiles() {
                     <div className="selectLoadProfiles__three">
                         <div className="selectLoadProfiles__heading__container">
                             <div className='selectLoadProfiles__heading'>
-                                <h1>Load Profile 5</h1>
+                                <Link to='loadprofile5'>
+                                    <h1>Load Profile 5</h1>
+                                 </Link>
                             </div>
 
                             <div className='selectLoadProfiles__heading'>
-                                <h1>Load Profile 6</h1>
+                                <Link to='loadprofile6'>
+                                    <h1>Load Profile 6</h1>
+                                 </Link>
                             </div>
                         </div>
                     </div>

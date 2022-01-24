@@ -1,13 +1,13 @@
 import { useState } from "react";
 import './LoadProfile.css';
 
-import image1 from '../../assets/load-profile-images/1.png'
+
 import {
     atan2, chain, derivative, e, evaluate, log, pi, pow, round, sqrt, complex, re, im, add, multiply, atan, divide, subtract, cos, square, LN10, LN2, log2, acos, unit, ceil, format
   } from 'mathjs'
 
 
-function LoadProfile({loadProfileData, capitalFactor, interest_p, fuel_p, consumption}) {
+function LoadProfile({loadProfileData, capitalFactor, interest_p, fuel_p, consumption, image}) {
 
     //input
     const [fuel, setFuel] = useState(fuel_p);
@@ -102,7 +102,7 @@ function LoadProfile({loadProfileData, capitalFactor, interest_p, fuel_p, consum
             <div className="loadProfile__container">
                 <h1>Load Profile 1</h1>
                 <div className="loadProfile__chart">
-                    <img src={image1}/>
+                    <img src={image}/>
                 </div>
                 <div className="result__heading">
                     <h1>Input</h1>
