@@ -3,6 +3,12 @@
     flex-direction: column;
     margin: 0px 0px 0px 30px;
 }
+
+.loadProfile__chart > img{
+    height: 80vh;
+    width: 80vw;
+}
+
 .loadProfile__result__main{
     display: flex;
     /* margin: 0px 0px 0px 30px; */
@@ -39,4 +45,11 @@
 
 .loadProfile__technical__heading, .loadProfile__economical__heading{
     text-align: left;
+}
+
+@media screen and (max-width: 480px) {
+    .loadProfile__result__main{
+        display: flex;
+        flex-direction: column;
+    }
 }
