@@ -9,6 +9,10 @@
     width: 80vw;
 }
 
+.loadProfile__result__container{
+    margin-bottom: 10px;
+}
+
 .loadProfile__result__main{
     display: flex;
     /* margin: 0px 0px 0px 30px; */

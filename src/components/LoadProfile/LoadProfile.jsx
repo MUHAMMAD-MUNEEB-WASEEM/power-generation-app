@@ -1,5 +1,6 @@
 import { useState } from "react";
 import './LoadProfile.css';
+import { Link } from "react-router-dom";
 
 
 import {
@@ -7,7 +8,7 @@ import {
   } from 'mathjs'
 
 
-function LoadProfile({loadProfileData, capitalFactor, interest_p, fuel_p, consumption, image}) {
+function LoadProfile({loadProfileData, capitalFactor, interest_p, fuel_p, consumption, image, remarks, button}) {
 
     //input
     const [fuel, setFuel] = useState(fuel_p);
@@ -193,6 +194,23 @@ function LoadProfile({loadProfileData, capitalFactor, interest_p, fuel_p, consum
                                 <input type="number" value={format(runningCost,3)}></input>
                             </div>
                         </div>
+                    </div>
+
+                    <div className="loadProfile__remarks">
+                        <h3>Remarks = {remarks}</h3>
+                        
+                        {button&&(
+                        <div className="loadProfile__remarks__button">
+                            
+                            <Link to="/loadprofiles/loadprofile6/recommendation">
+                                <button>
+                                    {button}
+                                </button>
+                            </Link>
+                            
+                        </div>
+                        )}
+                    
                     </div>
 
                 </div>
