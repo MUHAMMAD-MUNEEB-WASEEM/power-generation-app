@@ -1,0 +1,37 @@
+.recommendation__table{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* .recommendation__table > table > tr, td {
+    padding: 20px;
+    text-align: left;
+    font-size: 20px;
+    justify-content: space-between
+} */
+
+/* .recommendation__table > table > tr {
+    font-size: 25px;
+    color: black;
+    font-weight: 700;
+}
+
+.recommendation__table > table > tr > td {
+    color: black;
+}
+
+.recommendation__table > table{
+    width: 800px;
+    height: 400px;
+}
+
+.recommendation__table > table > tr:hover {
+    background-color: #fff;
+    color:black;
+}  */
+
+.recommendation__table > table {
+    height: 400px;
+}
