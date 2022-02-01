@@ -7,10 +7,45 @@ import {
 
 
 function Recommendation() {
+    
+    const loadProfileData = [2400,
+        2320,
+        2500,
+        2730,
+        2991,
+        3120,
+        3340,
+        3590,
+        3780,
+        3900,
+        3981,
+        4000,
+        4250,
+        4073,
+        3800,
+        3700,
+        3500,
+        3300,
+        3120,
+        2999,
+        2860,
+        2650,
+        2500,
+        2400
+]
 
-  const loadFactor = 100;
-  const energy = 100;
-  const maxDemand = 100;
+    const energy = loadProfileData.reduce((a, b) => a + b, 0) * 1000;
+
+
+    const generatorSet = 1500 + 1000 + 750 + 500 + 500 + 1500;
+
+    const capacity24Hours = 1500*24 + 1000*24 + 500*19 + 500*14 + 750*9 + 1500;
+
+  const plantCapacityFactor = energy/(generatorSet * 1000 * 24);
+  const plantUseFactor = energy/(capacity24Hours*1000);
+  
+  
+  
   const unitGenerated = 100;
   const annualOperatingCost = 1000;
   const capitalCost = 11111;
@@ -32,28 +67,43 @@ function Recommendation() {
             <div className='recommendation__table'>
                 <table>
                   <tr>
-                    <th>Generators</th>
-                    <th>Rating</th>
+                    <th>Generator Set</th>
+                    <th>Rating (MW)</th>
+                    <th>Hours</th>
                   </tr>
                       <tr>
-                          <td>Season 1</td>
-                          <td>Fireboy and Watergirl</td>
+                          <td>Generator 1</td>
+                          <td>1500</td>
+                          <td>24</td>
                       
                       </tr>
                       <tr>
-                          <td>Season 2</td>
-                          <td>Monster Earth and Witch Air</td>
-                        
+                          <td>Generator 2</td>
+                          <td>1000</td>
+                          <td>24</td>
                       </tr>
                       <tr>
-                          <td>Season 3</td>
-                          <td>Breeding Game</td>
-                        
+                          <td>Generator 3</td>
+                          <td>500</td>
+                          <td>19</td>
                       </tr>
                       <tr>
-                          <td>Season 4</td>
-                          <td>Game on Sandbox</td>
+                          <td>Generator 4</td>
+                          <td>500</td>
+                          <td>14</td>
                         
+                        </tr>
+
+                        <tr>
+                          <td>Generator 5</td>
+                          <td>750</td>
+                          <td>9</td>
+                        </tr>
+
+                        <tr>
+                          <td>Reserve</td>
+                          <td>1500</td>
+                          <td>-</td>
                         </tr>
                 </table>
             </div>
@@ -73,8 +123,8 @@ function Recommendation() {
                             </div>
 
                             <div className="loadProfile__result">
-                                <h3>Load Factor = </h3>
-                                <input type="number" value={loadFactor.toFixed(2) * 100}></input>
+                                <h3>Plant Capacity Factor = </h3>
+                                <input type="number" value={plantCapacityFactor.toFixed(2) * 100}></input>
                             </div>
 
                             {/* <div className="loadProfile__result">
@@ -88,8 +138,8 @@ function Recommendation() {
                             </div> */}
 
                             <div className="loadProfile__result">
-                                <h3>Max Demand (kW) = </h3>
-                                <input type="number" value={format(maxDemand,10)}></input>
+                                <h3>Plant Use Factor = </h3>
+                                <input type="number" value={plantUseFactor.toFixed(2) * 100}></input>
                             </div>
 
                             <div className="loadProfile__result">
@@ -98,10 +148,10 @@ function Recommendation() {
                             </div>
 
 
-                            <div className="loadProfile__result">
+                            {/* <div className="loadProfile__result">
                                 <h3>Units generated per annum (kWh) = </h3>
                                 <input type="number" value={format(unitGenerated,4)}></input>
-                            </div>
+                            </div> */}
                         
                         </div>
 

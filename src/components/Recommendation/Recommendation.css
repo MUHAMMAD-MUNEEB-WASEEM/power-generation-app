@@ -5,13 +5,16 @@
     text-align: center;
 }
 
-/* .recommendation__table > table > tr, td {
-    padding: 20px;
-    text-align: left;
-    font-size: 20px;
-    justify-content: space-between
-} */
+.recommendation__table > table > tr > th {
+    padding: 0px 40px;
+    font-size: 25px;
+    justify-content: space-between;
+}
 
+.recommendation__table > table > tr > td {
+    font-size: 20px;
+    justify-content: space-between;
+}
 /* .recommendation__table > table > tr {
     font-size: 25px;
     color: black;
@@ -33,5 +36,6 @@
 }  */
 
 .recommendation__table > table {
-    height: 400px;
+    height: 500px;
+    width: 800px;
 }
