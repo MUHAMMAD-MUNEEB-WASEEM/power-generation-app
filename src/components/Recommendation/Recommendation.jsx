@@ -6,7 +6,7 @@ import {
 } from 'mathjs'
 
 
-function Recommendation() {
+function Recommendation({capitalFactor, interest_p, fuel_p, consumption, image, remarks, button}) {
     
     const loadProfileData = [2400,
         2320,
@@ -43,15 +43,51 @@ function Recommendation() {
 
   const plantCapacityFactor = energy/(generatorSet * 1000 * 24);
   const plantUseFactor = energy/(capacity24Hours*1000);
-  
-  
-  
-  const unitGenerated = 100;
-  const annualOperatingCost = 1000;
-  const capitalCost = 11111;
-  const runningCost = 10000;
-  const semiFixedCost = 1010101;
 
+
+   //COSTING
+
+   const unitGenerated = (capacity24Hours*1000) * plantUseFactor *365;
+
+   console.log("unit generated", unitGenerated);
+
+
+
+   //Annual fixed cost
+
+   // const capitalFactor = capitalFactor;
+
+   const capitalCost = capitalFactor*generatorSet*1000;
+
+   console.log("capital cost / a", format(capitalCost,3));
+
+   //Semi Fixed Cost
+
+   const semiFixedCost = (interest_p/100)*capitalCost;
+
+    const maxDemand = 4250;
+
+   const b = semiFixedCost/maxDemand;
+
+   console.log("semi fixed cost", format(semiFixedCost,3));
+   console.log("b", b);
+
+   //Running Cost
+
+   // const consumption = consumption;
+   const runningCost = consumption * fuel_p * unitGenerated;
+
+   const c = runningCost/unitGenerated;
+
+   console.log("running cost", format(runningCost,3));
+   console.log("c", c);
+
+
+   //Annual Operating Cost
+
+   const annualOperatingCost= capitalCost + (b*maxDemand) + (c*unitGenerated);
+
+   console.log("annual operating cost", format(annualOperatingCost,3));
 
   return (
     <div className='recommendation'>
@@ -145,6 +181,11 @@ function Recommendation() {
                             <div className="loadProfile__result">
                                 <h3>Energy in 24 hours (kW) = </h3>
                                 <input type="number" value={format(energy, 3)}></input>
+                            </div>
+
+                            <div className="loadProfile__result">
+                                <h3>Units Generated per annum (kW) = </h3>
+                                <input type="number" value={format(unitGenerated, 4)}></input>
                             </div>
 
 
