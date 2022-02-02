@@ -53,7 +53,7 @@ function App() {
 
           {/*Comparision*/}
 
-          <Route path='/loadprofiles/loadprofile6/recommendation/comparision' element={<Comparision />}/>
+          <Route path='/loadprofiles/loadprofile6/recommendation/comparision' element={<Comparision capitalFactor={1000}  interest_p={0} fuel_p={1.36} consumption={0.3} button="View Comparision"/>}/>
 
 
         </Routes>
