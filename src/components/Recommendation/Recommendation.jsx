@@ -1,5 +1,6 @@
 import React from 'react';
 import './Recommendation.css'
+import { Link } from "react-router-dom";
 
 import {
   atan2, chain, derivative, e, evaluate, log, pi, pow, round, sqrt, complex, re, im, add, multiply, atan, divide, subtract, cos, square, LN10, LN2, log2, acos, unit, ceil, format
@@ -222,7 +223,26 @@ function Recommendation({capitalFactor, interest_p, fuel_p, consumption, image, 
                                 <input type="number" value={format(runningCost,3)}></input>
                             </div>
                         </div>
+
+                        <div className="loadProfile__remarks">
+                    
+                    
                     </div>
+
+
+                    </div>
+
+                    {button&&(
+                        <div className="loadProfile__remarks__button">
+                            
+                            <Link to="/loadprofiles/loadprofile6/recommendation/comparision">
+                                <button>
+                                    {button}
+                                </button>
+                            </Link>
+                            
+                        </div>
+                        )}
                 </div>
             
           </div>

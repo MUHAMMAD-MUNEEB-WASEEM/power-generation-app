@@ -11,6 +11,7 @@ import {BrowserRouter as Router,  Routes, Route } from 'react-router-dom'
 
 import image1 from './assets/load-profile-images/1.png'
 import Recommendation from './components/Recommendation/Recommendation'
+import Comparision from './components/Comparision/Comparision'
 
 
 function App() {
@@ -48,7 +49,12 @@ function App() {
           <Route path='/loadprofiles/loadprofile6' element={<LoadProfile image={image1} loadProfileData={[2400, 2320,2500,2730,2991,3120,3340,3590,3780,3900,3981,4000,4250,4073,3800,3700,3500,3300,3120,2999,2860,2650,2500,2400]} capitalFactor={1000}  interest_p={0} fuel_p={1.36} consumption={0.3} remarks="Poor" button="View Recommendation"/>}></Route>
         
           {/*Recommendation*/}
-          <Route path='/loadprofiles/loadprofile6/recommendation' element={<Recommendation capitalFactor={1000}  interest_p={0} fuel_p={1.36} consumption={0.3}/>}/>
+          <Route path='/loadprofiles/loadprofile6/recommendation' element={<Recommendation capitalFactor={1000}  interest_p={0} fuel_p={1.36} consumption={0.3} button="View Comparision"/>}/>
+
+          {/*Comparision*/}
+
+          <Route path='/loadprofiles/loadprofile6/recommendation/comparision' element={<Comparision />}/>
+
 
         </Routes>
       </Router>
