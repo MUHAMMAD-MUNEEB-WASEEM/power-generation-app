@@ -1,3 +1,7 @@
+.loadProfile{
+    overflow-x: hidden;
+}
+
 .loadProfile__input__container{
     display: flex;
     flex-direction: column;
@@ -6,7 +10,7 @@
 
 .loadProfile__chart > img{
     height: 80vh;
-    width: 80vw;
+    width: 70vw;
 }
 
 .loadProfile__result__container{
@@ -50,6 +54,119 @@
 .loadProfile__technical__heading, .loadProfile__economical__heading{
     text-align: left;
 }
+
+.loadProfile__container__heading{
+    display: flex;
+    align-items: center;
+}
+
+.loadProfile__container__heading > h1 {
+    color: #FFCC00;
+    font-size: 40px;
+    font-weight: 900;
+    flex: 0.99;
+    margin-right: 0px;
+}
+
+.container__button{
+    margin-left: -250px;
+}
+
+
+.result__heading > h1 {
+    color: #CCCCCC;
+    font-size: 35px;
+}
+
+.loadProfile__input > h3 {
+    color: #CCCCCC;
+}
+
+.loadProfile__technical__heading > h1 , .loadProfile__economical__heading > h1 {
+    color: #CCCCCC;
+}
+
+.loadProfile__result > h3 {
+    color: #CCCCCC;
+}
+
+.loadProfile__input > input, .loadProfile__result > input {
+    border-radius: 50px;
+    border: 3px solid #FFCC00;
+    background-color: #003466;
+    color: #CCCCCC;
+    font-size: 15px;
+    padding: 5px 10px;
+}
+
+.loadProfile__remarks > h3 {
+    font-size: 25px;
+    font-weight: 800;
+    color: #FFCC00;
+}
+
+.loadProfile__remarks__button{
+    margin-bottom: 20px;
+}
+
+.loadProfile__remarks__button > a > button{
+    font-size: 20px;
+    font-weight: bolder;
+    background: transparent;
+    color: #CCCCCC;
+    padding: 10px 15px;
+    /* border-radius: 5px; */
+    z-index: 99999;
+    cursor: pointer;
+    /* transition: all 0.3s ease-in; */
+    border-radius: 10px;
+    border: 2px solid #FFCC00;
+    pointer-events: all;
+    -webkit-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -moz-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    -ms-animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    animation: pulsing 1.25s infinite cubic-bezier(0.66, 0, 0, 1);
+    transition: all 300ms ease-in-out;
+    box-shadow: 0 0 0 0 rgba(255, 224, 124, 0.795);
+    white-space: nowrap;
+}
+
+@-webkit-keyframes pulsing {
+    to {
+      box-shadow: 0 0 0 30px rgba(232, 201, 61, 0);
+    }
+  }
+  
+  @-moz-keyframes pulsing {
+    to {
+      box-shadow: 0 0 0 30px rgba(232, 201, 61, 0);
+    }
+  }
+  
+  @-ms-keyframes pulsing {
+    to {
+      box-shadow: 0 0 0 30px rgba(232, 201, 61, 0);
+    }
+  }
+  
+  @keyframes pulsing {
+    to {
+      box-shadow: 0 0 0 30px rgba(232, 201, 61, 0);
+    }
+}
+
+
+.loadProfile__remarks__button > a > button:hover {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
+    color: #000;
+    background: #FFCC00;
+}
+
+
+
 
 @media screen and (max-width: 480px) {
     .loadProfile__result__main{

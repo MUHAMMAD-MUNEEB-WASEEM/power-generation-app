@@ -7,7 +7,7 @@ function Home() {
         <div className="home">
             <div className='home__container'>
                 <div className='home__heading'>
-                    <h1>LOAD PROFILE ANALYSIS</h1>
+                    <h1>POWER GENERATION LOAD PROFILE ANALYSIS</h1>
                 </div>
                 <div className='home__button'>
                     <Link to='/loadprofiles'>

@@ -1,5 +1,10 @@
 
 
+.comparision__heading > h1 {
+    color: #FFCC00;
+    font-size: 40px;
+    font-weight: 900;
+}
 
 .comparision__table{
     display: flex;
@@ -7,6 +12,16 @@
     justify-content: center;
     text-align: center;
 }
+
+.comparision__table > table, th, td  {
+    border: 2px solid #FFCC00;
+    color:#CCCCCC;
+}
+
+td  {
+    font-weight: 700;
+}
+
 
 .comparision__table > table > tr > th {
     padding: 0px 40px;
@@ -59,4 +74,9 @@
 
 .comment__section > h2 {
     margin-right: 10px;
+    color: #FFCC00;
+}
+
+.comment__section > h4 {
+    color: #CCCCCC;
 }

@@ -1,4 +1,8 @@
-
+.recommendation__heading > h1 {
+    color: #FFCC00;
+    font-size: 40px;
+    font-weight: 900;
+}
 
 
 .recommendation__table{
@@ -7,6 +11,16 @@
     justify-content: center;
     text-align: center;
 }
+
+.recommendation__table > table, th, td  {
+    border: 2px solid #FFCC00;
+    color:#CCCCCC;
+}
+
+td  {
+    font-weight: 700;
+}
+
 
 .recommendation__table > table > tr > th {
     padding: 0px 40px;

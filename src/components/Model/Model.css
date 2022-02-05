@@ -1,0 +1,16 @@
+.twod__image > img{
+    width: 900px;
+    height: 480px;
+}
+
+.twod__image{
+    margin-bottom: 15px;
+}
+
+.model__container > h1 {
+    color: #FFCC00;
+    font-size: 40px;
+    font-weight: 900;
+    flex: 0.999;
+    margin-right: 0px;
+}

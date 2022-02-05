@@ -6,7 +6,7 @@
 
 .selectLoadProfiles__container{
     margin: 90px 100px;
-    border: 2px solid #000; 
+    border: 3px solid #FFCC00; 
 }
 
 .selectLoadProfiles__main{
@@ -20,4 +20,18 @@
 .selectLoadProfiles__heading__container{
     display:flex;
     justify-content: space-around;
+}
+
+.selectLoadProfiles__heading > a{
+    text-decoration: none;
+    transition: all .35s ease;
+}
+
+.selectLoadProfiles__heading >a:hover{
+    text-decoration: underline;
+    color: #FFCC00;
+}
+
+.selectLoadProfiles__heading > a > h1 {
+    color: #CCCCCC;
 }

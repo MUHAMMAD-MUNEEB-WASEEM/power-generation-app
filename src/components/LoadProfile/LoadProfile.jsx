@@ -8,7 +8,7 @@ import {
   } from 'mathjs'
 
 
-function LoadProfile({loadProfileData, capitalFactor, interest_p, fuel_p, consumption, image, remarks, button}) {
+function LoadProfile({heading, loadProfileData, capitalFactor, interest_p, fuel_p, consumption, image, remarks, button, buttonModel}) {
 
     //input
     const [fuel, setFuel] = useState(fuel_p);
@@ -101,7 +101,20 @@ function LoadProfile({loadProfileData, capitalFactor, interest_p, fuel_p, consum
   return (
         <div className="loadProfile">
             <div className="loadProfile__container">
-                <h1>Load Profile 1</h1>
+                <div className="loadProfile__container__heading">
+                    <h1>{heading}</h1>
+                    {buttonModel&&(
+                            <div className="loadProfile__remarks__button container__button">
+                                
+                                <Link to="/loadprofiles/loadprofile6/model">
+                                    <button>
+                                        {buttonModel}
+                                    </button>
+                                </Link>
+                                
+                            </div>
+                        )}
+                </div>
                 <div className="loadProfile__chart">
                     <img src={image}/>
                 </div>
